@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBRemake</title>
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header><big>P</big>roto<big>B</big>owl <big>R</big>emake <big>//</big> <big><span class="rainbow">5/31/2024</span> //</big></header>
+    <div id="playHist">
+        <button id="plpa" class="play"><img src="images/play.png" id="plpaImg"></button><button id="skip"><img src="images/skip.png" id="skipImg"></button><button id="buzz"><img src="images/buzz.png" id="buzzImg"></button>
+        <input id="buzzAns" readonly autocomplete="off" type="text" placeholder="press space to buzz"></input>
+        <div class="solidLine"></div>
+        <div id="qInfo" class="textBox">Year/Name/Category</div>
+        <div class="dottedLine"></div>
+        <div id="qText" class="textBox">Question Content</div>
+        <div class="solidLine"></div>
+        <div class="textBox"><h2>History</h2></div>
+        <div id="historyDisp"></div>
+    </div>
+    <div id="statSett">
+        <div id="timerContainer">
+            <div id="timerBlock" class="greenbg"></div>
+            <div id="timerText">10.0s</div>
+        </div>
+        <div class="solidLine"></div>
+        <div class="textBox">
+            <h1>Stats</h1>
+            <h2>Points</h2>
+            <span class="red" id="allStatNeg">0</span>/<span class="green" id="allStatCorrect">0</span>/<span class="blue" id="allStatPower">0</span> // <span id="pointTotal">0</span> Total
+            <h3>By Category</h3>
+            Literature <span class="red" id="litStatNeg">0</span>/<span class="green" id="litStatCorrect">0</span>/<span class="blue" id="litStatPower">0</span><br>
+            History <span class="red" id="hisStatNeg">0</span>/<span class="green" id="hisStatCorrect">0</span>/<span class="blue" id="hisStatPower">0</span><br>
+            Science <span class="red" id="sciStatNeg">0</span>/<span class="green" id="sciStatCorrect">0</span>/<span class="blue" id="sciStatPower">0</span><br>
+            Fine Arts <span class="red" id="artStatNeg">0</span>/<span class="green" id="artStatCorrect">0</span>/<span class="blue" id="artStatPower">0</span><br>
+            Religion <span class="red" id="relStatNeg">0</span>/<span class="green" id="relStatCorrect">0</span>/<span class="blue" id="relStatPower">0</span><br>
+            Mythology <span class="red" id="mytStatNeg">0</span>/<span class="green" id="mytStatCorrect">0</span>/<span class="blue" id="mytStatPower">0</span><br>
+            Philosophy <span class="red" id="phiStatNeg">0</span>/<span class="green" id="phiStatCorrect">0</span>/<span class="blue" id="phiStatPower">0</span><br>
+            Social Science <span class="red" id="socStatNeg">0</span>/<span class="green" id="socStatCorrect">0</span>/<span class="blue" id="socStatPower">0</span><br>
+            Current Events <span class="red" id="curStatNeg">0</span>/<span class="green" id="curStatCorrect">0</span>/<span class="blue" id="curStatPower">0</span><br>
+            Geography <span class="red" id="geoStatNeg">0</span>/<span class="green" id="geoStatCorrect">0</span>/<span class="blue" id="geoStatPower">0</span><br>
+            Other Academic <span class="red" id="othStatNeg">0</span>/<span class="green" id="othStatCorrect">0</span>/<span class="blue" id="othStatPower">0</span><br>
+            Trash <span class="red" id="traStatNeg">0</span>/<span class="green" id="traStatCorrect">0</span>/<span class="blue" id="traStatPower">0</span><br>
+        </div>
+        <div class="solidLine"></div>
+        <div class="textBox">
+            <h1>Settings</h1>
+            <h2>Reading</h2>
+            <div>Reading Speed</div>
+            <input type="range" min="10" max="100" value="50" id="rSpeed">
+            <br><label for="showPause">Show question on pause?</label>
+            <input type="checkbox" id="showPause">
+            <h2>Questions</h2>
+            <h3>Difficulty</h3>
+            <select name="difficulty" id="difficulty">
+                <option value="0">Any</option>
+                <option value="1">Middle School</option>
+                <option value="2">Easy High School</option>
+                <option value="3">Regular High School</option>
+                <option value="4">Hard High School</option>
+                <option value="5">National High School</option>
+                <option value="6">Easy College</option>
+                <option value="7">Medium College</option>
+                <option value="8">Regionals College</option>
+                <option value="9">Nationals College</option>
+                <option value="10">Open</option>
+            </select>
+            <h3>Categories</h3>
+            <div>Literature</div><input type="range" min="0" max="10" value="1" id="litWeight" class="slider"><br>
+            <div>History</div><input type="range" min="0" max="10" value="1" id="hisWeight" class="slider"><br>
+            <div>Science</div><input type="range" min="0" max="10" value="1" id="sciWeight" class="slider"><br>
+            <div>Fine Arts</div><input type="range" min="0" max="10" value="1" id="artWeight" class="slider"><br>
+            <div>Religion</div><input type="range" min="0" max="10" value="1" id="relWeight" class="slider"><br>
+            <div>Mythology</div><input type="range" min="0" max="10" value="1" id="mytWeight" class="slider"><br>
+            <div>Philosophy</div><input type="range" min="0" max="10" value="1" id="phiWeight" class="slider"><br>
+            <div>Social Science</div><input type="range" min="0" max="10" value="1" id="socWeight" class="slider"><br>
+            <div>Current Events</div><input type="range" min="0" max="10" value="1" id="curWeight" class="slider"><br>
+            <div>Geography</div><input type="range" min="0" max="10" value="1" id="geoWeight" class="slider"><br>
+            <div>Other Academic</div><input type="range" min="0" max="10" value="1" id="othWeight" class="slider"><br>
+            <div>Trash</div><input type="range" min="0" max="10" value="1" id="traWeight" class="slider"><br>
+            <br>
+            <input type="button" value="Help" id="helpButton">
+        </div>
+    </div>
+    <div class="popup" id="help">
+        <div class="textBox">
+            <h1>Help</h1>
+            <h2>How To Play</h2>
+            <p>Thank you for choosing to play my Protobowl Remake! To start playing, press the green play button at the answer bar. A question will load and start reading. To pause the question, click the pause button that appears where the play button was. To skip a question, press the blue skip button and to buzz in and to answer, press the red bell button. If a button is gray, it cannot be used at this time and clicking it will do nothing. On a correct answer, you will be awarded 10 points. If you get the answer before the (*) power, you will be awarded 15 points. If you interrupt the question and get it wrong, you will be penalized 5 points.</p>
+            <h2>Settings Options</h2>
+            <p>The settings menu houses many options. Most of them are explained by their name, but for the categories options, the sliders control how often each category will appear. Other options will be added in further updates.</p>
+            <input type="button" value="Quit Menu" id="quitHelp">
+        </div>
+    </div>
+</body>
+</html>
