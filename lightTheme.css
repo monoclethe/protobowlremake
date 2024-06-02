@@ -1,0 +1,124 @@
+body {
+    background-color: white;
+}
+header {
+    background-color: lightgray;
+    color: black;
+}
+#playHist {
+    background-color: lightgray;
+}
+#statSett {
+    background-color: lightgray;
+}
+.play {
+    background-color: #42f545;
+}
+.pause {
+    background-color: #f5d742;
+}
+.play:hover {
+    background-color: #96f542;
+}
+.pause:hover {
+    background-color: #f57e42;
+}
+#skip {
+    background-color: #4242f5;
+}
+#skip:hover {
+    background-color: #429cf5;
+}
+#buzz {
+    background-color: #f54242;
+}
+#buzz:hover {
+    background-color: #f5429c;
+}
+.textBox {
+    background-color: white;
+    color: black;
+}
+#buzzAns {
+    background-color: white;
+    color: black;
+}
+#timerContainer {
+    background-color: #9c9c9c;
+}
+#timerBlock {
+    color: white;
+}
+.redstripe {
+    background: repeating-linear-gradient(
+    45deg,
+    #9c0000,
+    #9c0000 10px,
+    #830000 10px,
+    #830000 20px
+); 
+}
+.redbg {
+    background-color: #9c0000;
+}
+.bluestripe {
+    background: repeating-linear-gradient(
+    45deg,
+    #00009c,
+    #00009c 10px,
+    #000083 10px,
+    #000083 20px
+); 
+}
+.bluebg {
+    background-color: #00009c;
+}
+.greenstripe {
+    background: repeating-linear-gradient(
+    45deg,
+    #009c00,
+    #009c00 10px,
+    #008300 10px,
+    #008300 20px
+); 
+}
+.greenbg {
+    background-color: #009c00;
+}
+.solidLine {
+    border-bottom: 2px solid gray;
+}
+.dottedLine {
+    border-bottom: 2px dashed gray;
+}
+h1 {
+    border-bottom: 1px solid black;
+}
+h2 {
+    border-bottom: 1px dashed black;
+}
+option, select {
+    background-color: white;
+    color: black;
+}
+.popup {
+    background: lightgray;
+    border: 1px solid black;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+.blue {
+    color: blue;
+}
+#timerText {
+    color: white;
+}
+input {
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+}

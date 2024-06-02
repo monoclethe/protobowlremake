@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/icon.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="lightTheme.css" id="themeSrc">
     <script src="index.js" defer></script>
 </head>
 <body>
@@ -82,6 +83,11 @@
             <div>Geography</div><input type="range" min="0" max="10" value="1" id="geoWeight" class="slider"><br>
             <div>Other Academic</div><input type="range" min="0" max="10" value="1" id="othWeight" class="slider"><br>
             <div>Trash</div><input type="range" min="0" max="10" value="1" id="traWeight" class="slider"><br>
+            <h3>Themes</h3>
+            <select name="theme" id="theme" onchange="updateTheme()">
+                <option value="lightTheme">Light (default)</option>
+                <option value="darkTheme">Dark</option>
+            </select>
             <br>
             <input type="button" value="Help" id="helpButton">
         </div>
@@ -90,9 +96,17 @@
         <div class="textBox">
             <h1>Help</h1>
             <h2>How To Play</h2>
-            <p>Thank you for choosing to play my Protobowl Remake! To start playing, press the green play button at the answer bar. A question will load and start reading. To pause the question, click the pause button that appears where the play button was. To skip a question, press the blue skip button and to buzz in and to answer, press the red bell button. If a button is gray, it cannot be used at this time and clicking it will do nothing. On a correct answer, you will be awarded 10 points. If you get the answer before the (*) power, you will be awarded 15 points. If you interrupt the question and get it wrong, you will be penalized 5 points.</p>
-            <h2>Settings Options</h2>
-            <p>The settings menu houses many options. Most of them are explained by their name, but for the categories options, the sliders control how often each category will appear. Other options will be added in further updates.</p>
+            <h3>Play/Pause Button</h3>
+            Starts or pauses the question. Unavailable during buzz.
+            <h3>Skip Button</h3>
+            Skips the current active question. Unavailable while question is not active or during buzz.
+            <h3>Buzz/Submit Button</h3>
+            Buzzes/submits answer. Unavailable while question is not active or paused. Will auto-focus the submission box.
+            <h3>Timer</h3>
+            Counts down your buzz time/time after the question has finished. If the timer finishes, the question is over.
+            <h3>Score</h3>
+            If you get a question wrong before it is finished, you are penalized 5 points and are given a neg. If you finish a question after the power (if there is one), you will be awarded 10 points (correct). If you correctly answer before the power, you will be awarded 15 points (power). Scores are formatted in the following way:<br>
+            <span class="red">negs</span>/<span class="green">correct</span>/<span class="blue">powers</span>
             <input type="button" value="Quit Menu" id="quitHelp">
         </div>
     </div>

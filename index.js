@@ -508,3 +508,8 @@ function processAns(ansIn, ans) {
     }
     return correct;
 }
+
+function updateTheme () {
+    let newTheme = document.getElementById("theme").value;
+    document.getElementById("themeSrc").href = newTheme + ".css";
+}

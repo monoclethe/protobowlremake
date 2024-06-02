@@ -1,5 +1,4 @@
 header {
-    background-color: lightgray;
     font-family: sans-serif;
     font-size: 3vh;
     padding: 0.25vh;
@@ -8,8 +7,10 @@ header {
 big {
     font-size: 3.5vh;
 }
+h3 {
+    font-weight: bold;
+}
 #playHist {
-    background-color: lightgray;
     width: 68%;
     min-height: 50px;
     float: left;
@@ -18,7 +19,6 @@ big {
     margin-top: 1%;
 }
 #statSett {
-    background-color: lightgray;
     width: 29%;
     min-height: 50px;
     float: right;
@@ -38,40 +38,19 @@ input {
     border: none;
     border-radius: 12.5px;
 }
-.play {
-    background-color: #42f545;
-}
-.pause {
-    background-color: #f5d742;
-}
-.play:hover {
-    background-color: #96f542;
-}
-.pause:hover {
-    background-color: #f57e42;
-}
 #skip {
     width: 25px;
     height: 25px;
     border: none;
     border-radius: 12.5px;
-    background-color: #4242f5;
-}
-#skip:hover {
-    background-color: #429cf5;
 }
 #buzz {
     width: 25px;
     height: 25px;
     border: none;
     border-radius: 12.5px;
-    background-color: #f54242;
-}
-#buzz:hover {
-    background-color: #f5429c;
 }
 .textBox {
-    background-color: white;
     margin: 3px;
     font-family: sans-serif;
     padding: 3px;
@@ -80,7 +59,6 @@ input {
 #buzzAns {
     border: none;
     float: right;
-    background-color: white;
     margin: 3px;
     font-family: sans-serif;
     padding: 3px;
@@ -92,7 +70,6 @@ input {
     margin: 3px;
     width: calc(100% - 6px);
     height: 6vh;
-    background-color: #9c9c9c;
     position: relative;
 }
 #timerBlock {
@@ -101,79 +78,33 @@ input {
     text-align: center;
     line-height: 6vh;
     font-family: sans-serif;
-    color: white;
-}
-.redstripe {
-    background: repeating-linear-gradient(
-    45deg,
-    #9c0000,
-    #9c0000 10px,
-    #830000 10px,
-    #830000 20px
-); 
-}
-.redbg {
-    background-color: #9c0000;
-}
-.bluestripe {
-    background: repeating-linear-gradient(
-    45deg,
-    #00009c,
-    #00009c 10px,
-    #000083 10px,
-    #000083 20px
-); 
-}
-.bluebg {
-    background-color: #00009c;
-}
-.greenstripe {
-    background: repeating-linear-gradient(
-    45deg,
-    #009c00,
-    #009c00 10px,
-    #008300 10px,
-    #008300 20px
-); 
-}
-.greenbg {
-    background-color: #009c00;
 }
 .solidLine {
-    border-bottom: 2px solid gray;
     margin: 3px;
 }
 .dottedLine {
-    border-bottom: 2px dashed gray;
     margin: 3px;
 }
 h1 {
     font-size: 2em;
     padding: 3px;
-    border-bottom: 1px solid black;
 }
 h2 {
     font-size: 1.5em;
     padding: 3px;
-    border-bottom: 1px dashed black;
 }
 h3 {
     font-size: 1em;
     padding: 3px;
 }
-option, select {
-    background-color: white;
-}
 #historyQuery {
     margin: 3px;
 }
 .popup {
-    background: lightgray;
     position: absolute;
     width: 75%;
     left: 12.5%;
     top: 10%;
-    border: 1px solid black;
 }
 #quitHelp {
     position: absolute;
@@ -183,18 +114,8 @@ option, select {
 #help {
     display: none;
 }
-.red {
-    color: red;
-}
-.green {
-    color: green;
-}
-.blue {
-    color: blue;
-}
 #timerText {
     font-family: sans-serif;
-    color: white;
     position: absolute;
     line-height: 6vh;
     width: 100%;
