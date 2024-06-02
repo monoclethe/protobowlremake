@@ -286,7 +286,7 @@ document.addEventListener("keypress", function onEvent(event) {
     }
     else if (event.key === "s") {
         skipClick();
-    } else if (event.key === " " || event.key === "Enter") {
+    } else if ((event.key === " "  && !buzzState)|| event.key === "Enter") {
         event.preventDefault();
         buzzClick();
     }
@@ -405,6 +405,40 @@ function finishQuestion (result) {
     updScores();
     qHistory.unshift([qText, activeQ["answer"]]);
     updHistory();
+    if (!result) {
+        qTextOut.innerHTML += "<br><input type=\"button\" value=\"I was right\" id=\"wasRight\" onclick=\"iWasRight()\">";
+    } else {
+        qTextOut.innerHTML += "<br><input type=\"button\" value=\"I was wrong\" id=\"wasWrong\" onclick=\"iWasWrong()\">";
+    }
+}
+
+function iWasRight () {
+    document.getElementById("wasRight").remove();
+    scores["all"][0] -= 1;
+    scores[catMap[activeCat]][0] -= 1;
+    if (!powerActive) {
+        scores["all"][1] += 1;
+        scores[catMap[activeCat]][1] += 1;
+    } else {
+        scores["all"][2] += 1;
+        scores[catMap[activeCat]][2] += 1;
+    }
+    updScores();
+    qTextOut.innerHTML += "<input type=\"button\" value=\"I was wrong\" id=\"wasWrong\" onclick=\"iWasWrong()\">";
+}
+function iWasWrong () {
+    document.getElementById("wasWrong").remove();
+    scores["all"][0] += 1;
+    scores[catMap[activeCat]][0] += 1;
+    if (!powerActive) {
+        scores["all"][1] -= 1;
+        scores[catMap[activeCat]][1] -= 1;
+    } else {
+        scores["all"][2] -= 1;
+        scores[catMap[activeCat]][2] -= 1;
+    }
+    updScores();
+    qTextOut.innerHTML += "<input type=\"button\" value=\"I was right\" id=\"wasRight\" onclick=\"iWasRight()\">";
 }
 
 function updHistory () {
