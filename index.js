@@ -265,6 +265,7 @@ function initQuestion () {
 }
 helpButton.onclick = function () {
     document.getElementById("help").style.display = "block";
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
 quitHelpButton.onclick = function () {
     document.getElementById("help").style.display = "none";
