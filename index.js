@@ -386,6 +386,7 @@ function finishQuestion (result) {
     plpaEnable = true;
     plpa.classList = ["play"];
     plpaImg.src = "images/play.png";
+    plpaState = false;
     enableVis(plpa);
     skipEnable = false;
     disableVis(skip);
