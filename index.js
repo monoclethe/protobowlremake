@@ -15,6 +15,7 @@ const quitHelpButton = document.getElementById("quitHelp");
 const pointTotal = document.getElementById("pointTotal");
 const rSpeed = document.getElementById("rSpeed");
 const showPause = document.getElementById("showPause");
+const wpm = document.getElementById("wpm");
 
 const litWeight = document.getElementById("litWeight");
 const hisWeight = document.getElementById("hisWeight");
@@ -520,3 +521,8 @@ function updateTheme () {
     let newTheme = document.getElementById("theme").value;
     document.getElementById("themeSrc").href = newTheme + ".css";
 }
+
+function wpmUpdate () {
+    wpm.innerHTML = (60*(1000/(110 - rSpeed.value))/4.7).toFixed(1);
+}
+wpmUpdate();

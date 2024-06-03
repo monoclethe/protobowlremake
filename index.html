@@ -51,8 +51,8 @@
         <div class="textBox">
             <h1>Settings</h1>
             <h2>Reading</h2>
-            <div>Reading Speed</div>
-            <input type="range" min="10" max="100" value="50" id="rSpeed">
+            <div>Reading Speed (<span id="wpm">0</span> wpm)</div>
+            <input type="range" min="10" max="100" value="50" id="rSpeed" step="0.01" onchange="wpmUpdate()">
             <br><label for="showPause">Show question on pause?</label>
             <input type="checkbox" id="showPause">
             <h2>Questions</h2>
