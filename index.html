@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/icon.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="lightTheme.css" id="themeSrc">
+    <link rel="stylesheet" href="themes/dark.css" id="themeSrc">
     <script src="index.js" defer></script>
 </head>
 <body>
@@ -85,8 +85,8 @@
             <div>Trash</div><input type="range" min="0" max="10" value="1" id="traWeight" class="slider"><br>
             <h3>Themes</h3>
             <select name="theme" id="theme" onchange="updateTheme()">
-                <option value="lightTheme">Light (default)</option>
-                <option value="darkTheme">Dark</option>
+                <option value="themes/dark">Dark (default)</option>
+                <option value="themes/light">Light</option>
             </select>
             <br>
             <input type="button" value="Help" id="helpButton">
