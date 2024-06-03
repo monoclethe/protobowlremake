@@ -168,13 +168,14 @@ function countDownEnd () {
                 timerDisp.style.width = endCountDown + "%";
             } else {
                 clearInterval(timeManagers[1]);
+                finishQuestion();
             }
         }
     }, 10)
 }
 
 const punctuation = ["(", ")", "[", "]", ".", "?", "!", "-", ","];
-
+var qRead = false;
 function readTick () {
     //avg of 12.5 letters per second reading speed
     //or, a delay of .08s (80ms)
@@ -182,6 +183,7 @@ function readTick () {
     if (qActive) {
         if (plpaState && !buzzState) {
             if (qTextPos < qText.length) {
+                qRead = false;
                 qDisp += qText[qTextPos];
                 let timeoutLength = 110 - rSpeed.value;
                 qTextOut.innerHTML = qDisp;
@@ -195,6 +197,7 @@ function readTick () {
                 qTextPos++;
                 setTimeout(readTick, timeoutLength);
             } else {
+                qRead = true;
                 endCountDown = 100;
                 countDownEnd();
                 clearInterval(timeManagers[0]);
@@ -358,7 +361,6 @@ buzz.onclick = function () {
     buzzClick();
 }
 function finishBuzz () {
-    
     buzzState = false;
     buzzImg.src = "images/buzz.png";
     enableVis(plpa);
@@ -415,8 +417,10 @@ function finishQuestion (result) {
 
 function iWasRight () {
     document.getElementById("wasRight").remove();
-    scores["all"][0] -= 1;
-    scores[catMap[activeCat]][0] -= 1;
+    if (!qRead) {
+        scores["all"][0] -= 1;
+        scores[catMap[activeCat]][0] -= 1;
+    }
     if (!powerActive) {
         scores["all"][1] += 1;
         scores[catMap[activeCat]][1] += 1;
@@ -429,8 +433,10 @@ function iWasRight () {
 }
 function iWasWrong () {
     document.getElementById("wasWrong").remove();
-    scores["all"][0] += 1;
-    scores[catMap[activeCat]][0] += 1;
+    if (!qRead) {
+        scores["all"][0] += 1;
+        scores[catMap[activeCat]][0] += 1;
+    }
     if (!powerActive) {
         scores["all"][1] -= 1;
         scores[catMap[activeCat]][1] -= 1;
