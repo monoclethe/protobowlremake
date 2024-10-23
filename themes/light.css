@@ -91,12 +91,6 @@ header {
 .dottedLine {
     border-bottom: 2px dashed gray;
 }
-h1 {
-    border-bottom: 1px solid black;
-}
-h2 {
-    border-bottom: 1px dashed black;
-}
 option, select {
     background-color: white;
     color: black;

@@ -11,7 +11,7 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <header><big>P</big>roto<big>B</big>owl <big>R</big>emake <big>//</big> <big><span class="rainbow">6/2/2024</span> //</big></header>
+    <header><big>P</big>roto<big>B</big>owl <big>R</big>emake <big>//</big> <big><span class="rainbow">10/23/2024</span> //</big></header>
     <div id="playHist">
         <button id="plpa" class="play"><img src="images/play.png" id="plpaImg"></button><button id="skip"><img src="images/skip.png" id="skipImg"></button><button id="buzz"><img src="images/buzz.png" id="buzzImg"></button>
         <input id="buzzAns" readonly autocomplete="off" type="text" placeholder="press space to buzz"></input>
@@ -20,7 +20,7 @@
         <div class="dottedLine"></div>
         <div id="qText" class="textBox">Question Content</div>
         <div class="solidLine"></div>
-        <div class="textBox"><h2>History</h2></div>
+        <div class="textBox"><h2 style="width: fit-content; display: inline;">History</h2> - Page <input type="number" id="historyPage" value="1" min="1" onchange="updHistory()"></div>
         <div id="historyDisp"></div>
     </div>
     <div id="statSett">
@@ -108,7 +108,7 @@
             If you get a question wrong before it is finished, you are penalized 5 points and are given a neg. If you finish a question after the power (if there is one), you will be awarded 10 points (correct). If you correctly answer before the power, you will be awarded 15 points (power). Scores are formatted in the following way:<br>
             <span class="red">negs</span>/<span class="green">correct</span>/<span class="blue">powers</span>
             <h3>Information</h3>
-            Version 1.0.0 (6/2/2024)<br>
+            Version 1.1.0 (10/23/2024)<br>
             Made by Monocle
             <input type="button" value="Quit Menu" id="quitHelp">
         </div>

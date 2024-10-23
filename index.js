@@ -451,13 +451,12 @@ function iWasWrong () {
 }
 
 function updHistory () {
+    let page = document.getElementById("historyPage").value - 1;
     let hisBuffer = "";
-    let lim = qHistory.length;
-    if (qHistory.length > 5) {
-        lim = 5;
-    }
-    for (let i = 0; i < lim; i++) {
-        hisBuffer += "<div class=\"textBox\">" + qHistory[i][0] + "</div>" + "<div class=\"textBox\">" + qHistory[i][1] + "</div><div class=\"dottedLine\"></div>";
+    for (let i = 0; i < 5; i++) {
+        if (qHistory[i+page*5]) {
+            hisBuffer += "<div class=\"textBox\">" + qHistory[i+page*5][0] + "</div>" + "<div class=\"textBox\">" + qHistory[i+page*5][1] + "</div><div class=\"dottedLine\"></div>";
+        }
     }
     historyDisp.innerHTML = hisBuffer;
 }

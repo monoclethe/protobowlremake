@@ -122,3 +122,7 @@ h3 {
     text-align: center;
     top: 0;
 }
+#historyPage {
+    align-self: center;
+    width: 6ch;
+}
