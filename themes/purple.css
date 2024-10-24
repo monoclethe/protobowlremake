@@ -1,15 +1,15 @@
 body {
-    background-color: black;
+    background-color: #180018;
 }
 header {
-    background-color: #333333;
+    background-color: #303;
     color: white;
 }
 #playHist {
-    background-color: #333333;
+    background-color: #303;
 }
 #statSett {
-    background-color: #333333;
+    background-color: #303;
 }
 .play {
     background-color: #42f545;
@@ -36,15 +36,15 @@ header {
     background-color: #f5429c;
 }
 .textBox {
-    background-color: #282828;
+    background-color: #280028;
     color: white;
 }
 #buzzAns {
-    background-color: #282828;
+    background-color: #280028;
     color: white;
 }
 #timerContainer {
-    background-color: #9c9c9c;
+    background-color: #9c009c;
 }
 #timerBlock {
     color: white;
@@ -92,12 +92,12 @@ header {
     border-bottom: 2px dashed gray;
 }
 option, select {
-    background-color: #333333;
+    background-color: #303;
     color: white;
 }
 .popup {
-    background: #333333;
-    border: 1px solid black;
+    background: #303;
+    border: 1px solid #180018;
 }
 .red {
     color: #F44;
@@ -112,7 +112,7 @@ option, select {
     color: white;
 }
 input {
-    background-color: #333333;
+    background-color: #330033;
     color: white;
-    border: 2px solid black
+    border: 2px solid #180018;
 }

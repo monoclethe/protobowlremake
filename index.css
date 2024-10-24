@@ -30,7 +30,7 @@ button {
     padding: 0px;
 }
 input {
-    border-radius: 0;
+    align-self: baseline;
 }
 #plpa {
     width: 25px;
@@ -125,4 +125,8 @@ h3 {
 #historyPage {
     align-self: center;
     width: 6ch;
+}
+.slider {
+    display: inline-block;
+    vertical-align: middle;
 }

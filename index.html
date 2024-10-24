@@ -34,18 +34,20 @@
             <h2>Points</h2>
             <span class="red" id="allStatNeg">0</span>/<span class="green" id="allStatCorrect">0</span>/<span class="blue" id="allStatPower">0</span> // <span id="pointTotal">0</span> Total
             <h3>By Category</h3>
-            Literature <span class="red" id="litStatNeg">0</span>/<span class="green" id="litStatCorrect">0</span>/<span class="blue" id="litStatPower">0</span><br>
-            History <span class="red" id="hisStatNeg">0</span>/<span class="green" id="hisStatCorrect">0</span>/<span class="blue" id="hisStatPower">0</span><br>
-            Science <span class="red" id="sciStatNeg">0</span>/<span class="green" id="sciStatCorrect">0</span>/<span class="blue" id="sciStatPower">0</span><br>
-            Fine Arts <span class="red" id="artStatNeg">0</span>/<span class="green" id="artStatCorrect">0</span>/<span class="blue" id="artStatPower">0</span><br>
-            Religion <span class="red" id="relStatNeg">0</span>/<span class="green" id="relStatCorrect">0</span>/<span class="blue" id="relStatPower">0</span><br>
-            Mythology <span class="red" id="mytStatNeg">0</span>/<span class="green" id="mytStatCorrect">0</span>/<span class="blue" id="mytStatPower">0</span><br>
-            Philosophy <span class="red" id="phiStatNeg">0</span>/<span class="green" id="phiStatCorrect">0</span>/<span class="blue" id="phiStatPower">0</span><br>
-            Social Science <span class="red" id="socStatNeg">0</span>/<span class="green" id="socStatCorrect">0</span>/<span class="blue" id="socStatPower">0</span><br>
-            Current Events <span class="red" id="curStatNeg">0</span>/<span class="green" id="curStatCorrect">0</span>/<span class="blue" id="curStatPower">0</span><br>
-            Geography <span class="red" id="geoStatNeg">0</span>/<span class="green" id="geoStatCorrect">0</span>/<span class="blue" id="geoStatPower">0</span><br>
-            Other Academic <span class="red" id="othStatNeg">0</span>/<span class="green" id="othStatCorrect">0</span>/<span class="blue" id="othStatPower">0</span><br>
-            Trash <span class="red" id="traStatNeg">0</span>/<span class="green" id="traStatCorrect">0</span>/<span class="blue" id="traStatPower">0</span><br>
+            <table style="width: fit-content;">
+            <tr><td>Literature</td><td>| <span class="red" id="litStatNeg">0</span>/<span class="green" id="litStatCorrect">0</span>/<span class="blue" id="litStatPower">0</span></td></tr>
+            <tr><td>History</td><td>| <span class="red" id="hisStatNeg">0</span>/<span class="green" id="hisStatCorrect">0</span>/<span class="blue" id="hisStatPower">0</span></td></tr>
+            <tr><td>Science</td><td>| <span class="red" id="sciStatNeg">0</span>/<span class="green" id="sciStatCorrect">0</span>/<span class="blue" id="sciStatPower">0</span></td></tr>
+            <tr><td>Fine Arts</td><td>| <span class="red" id="artStatNeg">0</span>/<span class="green" id="artStatCorrect">0</span>/<span class="blue" id="artStatPower">0</span></td></tr>
+            <tr><td>Religion</td><td>| <span class="red" id="relStatNeg">0</span>/<span class="green" id="relStatCorrect">0</span>/<span class="blue" id="relStatPower">0</span></td></tr>
+            <tr><td>Mythology</td><td>| <span class="red" id="mytStatNeg">0</span>/<span class="green" id="mytStatCorrect">0</span>/<span class="blue" id="mytStatPower">0</span></td></tr>
+            <tr><td>Philosophy</td><td>| <span class="red" id="phiStatNeg">0</span>/<span class="green" id="phiStatCorrect">0</span>/<span class="blue" id="phiStatPower">0</span></td></tr>
+            <tr><td>Social Science</td><td>| <span class="red" id="socStatNeg">0</span>/<span class="green" id="socStatCorrect">0</span>/<span class="blue" id="socStatPower">0</span></td></tr>
+            <tr><td>Current Events</td><td>| <span class="red" id="curStatNeg">0</span>/<span class="green" id="curStatCorrect">0</span>/<span class="blue" id="curStatPower">0</span></td></tr>
+            <tr><td>Geography</td><td>| <span class="red" id="geoStatNeg">0</span>/<span class="green" id="geoStatCorrect">0</span>/<span class="blue" id="geoStatPower">0</span></td></tr>
+            <tr><td>Other Academic</td><td>| <span class="red" id="othStatNeg">0</span>/<span class="green" id="othStatCorrect">0</span>/<span class="blue" id="othStatPower">0</span></td></tr>
+            <tr><td>Trash</td><td>| <span class="red" id="traStatNeg">0</span>/<span class="green" id="traStatCorrect">0</span>/<span class="blue" id="traStatPower">0</span></td></tr>
+            </table>
         </div>
         <div class="solidLine"></div>
         <div class="textBox">
@@ -71,21 +73,25 @@
                 <option value="10">Open</option>
             </select>
             <h3>Categories</h3>
-            <div>Literature</div><input type="range" min="0" max="10" value="1" id="litWeight" class="slider"><br>
-            <div>History</div><input type="range" min="0" max="10" value="1" id="hisWeight" class="slider"><br>
-            <div>Science</div><input type="range" min="0" max="10" value="1" id="sciWeight" class="slider"><br>
-            <div>Fine Arts</div><input type="range" min="0" max="10" value="1" id="artWeight" class="slider"><br>
-            <div>Religion</div><input type="range" min="0" max="10" value="1" id="relWeight" class="slider"><br>
-            <div>Mythology</div><input type="range" min="0" max="10" value="1" id="mytWeight" class="slider"><br>
-            <div>Philosophy</div><input type="range" min="0" max="10" value="1" id="phiWeight" class="slider"><br>
-            <div>Social Science</div><input type="range" min="0" max="10" value="1" id="socWeight" class="slider"><br>
-            <div>Current Events</div><input type="range" min="0" max="10" value="1" id="curWeight" class="slider"><br>
-            <div>Geography</div><input type="range" min="0" max="10" value="1" id="geoWeight" class="slider"><br>
-            <div>Other Academic</div><input type="range" min="0" max="10" value="1" id="othWeight" class="slider"><br>
-            <div>Trash</div><input type="range" min="0" max="10" value="1" id="traWeight" class="slider"><br>
+            <table style="width: fit-content">
+            <tr><td>Literature</td><td><input type="range" min="0" max="10" value="1" id="litWeight" class="slider"><br></td></tr>
+            <tr><td>History</td><td><input type="range" min="0" max="10" value="1" id="hisWeight" class="slider"><br></td></tr>
+            <tr><td>Science</td><td><input type="range" min="0" max="10" value="1" id="sciWeight" class="slider"><br></td></tr>
+            <tr><td>Fine Arts</td><td><input type="range" min="0" max="10" value="1" id="artWeight" class="slider"><br></td></tr>
+            <tr><td>Religion</td><td><input type="range" min="0" max="10" value="1" id="relWeight" class="slider"><br></td></tr>
+            <tr><td>Mythology</td><td><input type="range" min="0" max="10" value="1" id="mytWeight" class="slider"><br></td></tr>
+            <tr><td>Philosophy</td><td><input type="range" min="0" max="10" value="1" id="phiWeight" class="slider"><br></td></tr>
+            <tr><td>Social Science</td><td><input type="range" min="0" max="10" value="1" id="socWeight" class="slider"><br></td></tr>
+            <tr><td>Current Events</td><td><input type="range" min="0" max="10" value="1" id="curWeight" class="slider"><br></td></tr>
+            <tr><td>Geography</td><td><input type="range" min="0" max="10" value="1" id="geoWeight" class="slider"><br></td></tr>
+            <tr><td>Other Academic</td><td><input type="range" min="0" max="10" value="1" id="othWeight" class="slider"><br></td></tr>
+            <tr><td>Trash</td><td><input type="range" min="0" max="10" value="1" id="traWeight" class="slider"><br></td></tr>
+            </table>
             <h3>Themes</h3>
             <select name="theme" id="theme" onchange="updateTheme()">
                 <option value="themes/dark">Dark (default)</option>
+                <option value="themes/crimson">Crimson</option>
+                <option value="themes/purple">Purple</option>
                 <option value="themes/light">Light</option>
             </select>
             <br>
