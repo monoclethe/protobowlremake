@@ -2,6 +2,8 @@
 ProtoBowlRemake is a remake of Protobowl using the QBreader API. Try it out!
 
 ## Changelog
+### Update 1.1.1 (October 24, 2024)
+- Adjusted spacing of some elements
 ### Update 1.1.0 (October 23, 2024)
 - Readme added
 - Page system for question history

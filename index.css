@@ -129,4 +129,5 @@ h3 {
 .slider {
     display: inline-block;
     vertical-align: middle;
+    width: calc(100% - 10px);
 }
