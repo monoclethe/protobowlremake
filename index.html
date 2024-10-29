@@ -11,7 +11,7 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <header><big>P</big>roto<big>B</big>owl <big>R</big>emake <big>//</big> <big><span class="rainbow">10/24/2024</span> //</big></header>
+    <header><big>P</big>roto<big>B</big>owl <big>R</big>emake <big>//</big> <big><span class="rainbow">10/28/2024</span> //</big></header>
     <div id="playHist">
         <button id="plpa" class="play"><img src="images/play.png" id="plpaImg"></button><button id="skip"><img src="images/skip.png" id="skipImg"></button><button id="buzz"><img src="images/buzz.png" id="buzzImg"></button>
         <input id="buzzAns" readonly autocomplete="off" type="text" placeholder="press space to buzz"></input>
@@ -32,31 +32,31 @@
         <div class="textBox">
             <h1>Stats</h1>
             <h2>Points</h2>
-            <span class="red" id="allStatNeg">0</span>/<span class="green" id="allStatCorrect">0</span>/<span class="blue" id="allStatPower">0</span> // <span id="pointTotal">0</span> Total
-            <h3>By Category</h3>
-            <table style="width: fit-content;">
-            <tr><td>Literature</td><td>| <span class="red" id="litStatNeg">0</span>/<span class="green" id="litStatCorrect">0</span>/<span class="blue" id="litStatPower">0</span></td></tr>
-            <tr><td>History</td><td>| <span class="red" id="hisStatNeg">0</span>/<span class="green" id="hisStatCorrect">0</span>/<span class="blue" id="hisStatPower">0</span></td></tr>
-            <tr><td>Science</td><td>| <span class="red" id="sciStatNeg">0</span>/<span class="green" id="sciStatCorrect">0</span>/<span class="blue" id="sciStatPower">0</span></td></tr>
-            <tr><td>Fine Arts</td><td>| <span class="red" id="artStatNeg">0</span>/<span class="green" id="artStatCorrect">0</span>/<span class="blue" id="artStatPower">0</span></td></tr>
-            <tr><td>Religion</td><td>| <span class="red" id="relStatNeg">0</span>/<span class="green" id="relStatCorrect">0</span>/<span class="blue" id="relStatPower">0</span></td></tr>
-            <tr><td>Mythology</td><td>| <span class="red" id="mytStatNeg">0</span>/<span class="green" id="mytStatCorrect">0</span>/<span class="blue" id="mytStatPower">0</span></td></tr>
-            <tr><td>Philosophy</td><td>| <span class="red" id="phiStatNeg">0</span>/<span class="green" id="phiStatCorrect">0</span>/<span class="blue" id="phiStatPower">0</span></td></tr>
-            <tr><td>Social Science</td><td>| <span class="red" id="socStatNeg">0</span>/<span class="green" id="socStatCorrect">0</span>/<span class="blue" id="socStatPower">0</span></td></tr>
-            <tr><td>Current Events</td><td>| <span class="red" id="curStatNeg">0</span>/<span class="green" id="curStatCorrect">0</span>/<span class="blue" id="curStatPower">0</span></td></tr>
-            <tr><td>Geography</td><td>| <span class="red" id="geoStatNeg">0</span>/<span class="green" id="geoStatCorrect">0</span>/<span class="blue" id="geoStatPower">0</span></td></tr>
-            <tr><td>Other Academic</td><td>| <span class="red" id="othStatNeg">0</span>/<span class="green" id="othStatCorrect">0</span>/<span class="blue" id="othStatPower">0</span></td></tr>
-            <tr><td>Trash</td><td>| <span class="red" id="traStatNeg">0</span>/<span class="green" id="traStatCorrect">0</span>/<span class="blue" id="traStatPower">0</span></td></tr>
-            </table>
+            <span class="red" id="allStatNeg">0</span>/<span class="green" id="allStatCorrect">0</span>/<span class="blue" id="allStatPower">0</span> // <span id="pointTotal">0</span> Total <div id="scoreBreakdown">?</div>
+            <div id="categoryBreakdown"><h3>By Category</h3>
+                <table style="width: fit-content;">
+                <tr><td>Literature</td><td><span class="red" id="litStatNeg">0</span>/<span class="green" id="litStatCorrect">0</span>/<span class="blue" id="litStatPower">0</span></td></tr>
+                <tr><td>History</td><td><span class="red" id="hisStatNeg">0</span>/<span class="green" id="hisStatCorrect">0</span>/<span class="blue" id="hisStatPower">0</span></td></tr>
+                <tr><td>Science</td><td><span class="red" id="sciStatNeg">0</span>/<span class="green" id="sciStatCorrect">0</span>/<span class="blue" id="sciStatPower">0</span></td></tr>
+                <tr><td>Fine Arts</td><td><span class="red" id="artStatNeg">0</span>/<span class="green" id="artStatCorrect">0</span>/<span class="blue" id="artStatPower">0</span></td></tr>
+                <tr><td>Religion</td><td><span class="red" id="relStatNeg">0</span>/<span class="green" id="relStatCorrect">0</span>/<span class="blue" id="relStatPower">0</span></td></tr>
+                <tr><td>Mythology</td><td><span class="red" id="mytStatNeg">0</span>/<span class="green" id="mytStatCorrect">0</span>/<span class="blue" id="mytStatPower">0</span></td></tr>
+                <tr><td>Philosophy</td><td><span class="red" id="phiStatNeg">0</span>/<span class="green" id="phiStatCorrect">0</span>/<span class="blue" id="phiStatPower">0</span></td></tr>
+                <tr><td>Social Science</td><td><span class="red" id="socStatNeg">0</span>/<span class="green" id="socStatCorrect">0</span>/<span class="blue" id="socStatPower">0</span></td></tr>
+                <tr><td>Current Events</td><td><span class="red" id="curStatNeg">0</span>/<span class="green" id="curStatCorrect">0</span>/<span class="blue" id="curStatPower">0</span></td></tr>
+                <tr><td>Geography</td><td><span class="red" id="geoStatNeg">0</span>/<span class="green" id="geoStatCorrect">0</span>/<span class="blue" id="geoStatPower">0</span></td></tr>
+                <tr><td>Other Academic</td><td><span class="red" id="othStatNeg">0</span>/<span class="green" id="othStatCorrect">0</span>/<span class="blue" id="othStatPower">0</span></td></tr>
+                <tr><td>Trash</td><td><span class="red" id="traStatNeg">0</span>/<span class="green" id="traStatCorrect">0</span>/<span class="blue" id="traStatPower">0</span></td></tr>
+                </table></div>
         </div>
         <div class="solidLine"></div>
         <div class="textBox">
             <h1>Settings</h1>
             <h2>Reading</h2>
-            <div>Reading Speed (<span id="wpm">0</span> wpm)</div>
-            <input type="range" min="10" max="100" value="50" id="rSpeed" step="0.01" onchange="wpmUpdate()">
-            <br><label for="showPause">Show question on pause?</label>
-            <input type="checkbox" id="showPause">
+            <div>Reading Speed (wpm)</div>
+            <input type="number" min="60" max="1200" value="450" id="rSpeed" step="0.01" onchange="wpmUpdate()" style="display: inline-block;">
+            <br>Hide question on pause?
+            <input type="checkbox" id="showPause" style="display: inline-block;">
             <h2>Questions</h2>
             <h3>Difficulty</h3>
             <select name="difficulty" id="difficulty">
@@ -73,26 +73,27 @@
                 <option value="10">Open</option>
             </select>
             <h3>Categories</h3>
-            <table style="width: fit-content">
-            <tr><td>Literature</td><td><input type="range" min="0" max="10" value="1" id="litWeight" class="slider"><br></td></tr>
-            <tr><td>History</td><td><input type="range" min="0" max="10" value="1" id="hisWeight" class="slider"><br></td></tr>
-            <tr><td>Science</td><td><input type="range" min="0" max="10" value="1" id="sciWeight" class="slider"><br></td></tr>
-            <tr><td>Fine Arts</td><td><input type="range" min="0" max="10" value="1" id="artWeight" class="slider"><br></td></tr>
-            <tr><td>Religion</td><td><input type="range" min="0" max="10" value="1" id="relWeight" class="slider"><br></td></tr>
-            <tr><td>Mythology</td><td><input type="range" min="0" max="10" value="1" id="mytWeight" class="slider"><br></td></tr>
-            <tr><td>Philosophy</td><td><input type="range" min="0" max="10" value="1" id="phiWeight" class="slider"><br></td></tr>
-            <tr><td>Social Science</td><td><input type="range" min="0" max="10" value="1" id="socWeight" class="slider"><br></td></tr>
-            <tr><td>Current Events</td><td><input type="range" min="0" max="10" value="1" id="curWeight" class="slider"><br></td></tr>
-            <tr><td>Geography</td><td><input type="range" min="0" max="10" value="1" id="geoWeight" class="slider"><br></td></tr>
-            <tr><td>Other Academic</td><td><input type="range" min="0" max="10" value="1" id="othWeight" class="slider"><br></td></tr>
-            <tr><td>Trash</td><td><input type="range" min="0" max="10" value="1" id="traWeight" class="slider"><br></td></tr>
+            <table id="categoryWeights" style="width: fit-content">
+            <tr><td>Literature</td><td><input type="number" min="0" max="10" value="1" id="litWeight" class="slider"><br></td></tr>
+            <tr><td>History</td><td><input type="number" min="0" max="10" value="1" id="hisWeight" class="slider"><br></td></tr>
+            <tr><td>Science</td><td><input type="number" min="0" max="10" value="1" id="sciWeight" class="slider"><br></td></tr>
+            <tr><td>Fine Arts</td><td><input type="number" min="0" max="10" value="1" id="artWeight" class="slider"><br></td></tr>
+            <tr><td>Religion</td><td><input type="number" min="0" max="10" value="1" id="relWeight" class="slider"><br></td></tr>
+            <tr><td>Mythology</td><td><input type="number" min="0" max="10" value="1" id="mytWeight" class="slider"><br></td></tr>
+            <tr><td>Philosophy</td><td><input type="number" min="0" max="10" value="1" id="phiWeight" class="slider"><br></td></tr>
+            <tr><td>Social Science</td><td><input type="number" min="0" max="10" value="1" id="socWeight" class="slider"><br></td></tr>
+            <tr><td>Current Events</td><td><input type="number" min="0" max="10" value="1" id="curWeight" class="slider"><br></td></tr>
+            <tr><td>Geography</td><td><input type="number" min="0" max="10" value="1" id="geoWeight" class="slider"><br></td></tr>
+            <tr><td>Other Academic</td><td><input type="number" min="0" max="10" value="1" id="othWeight" class="slider"><br></td></tr>
+            <tr><td>Trash</td><td><input type="number" min="0" max="10" value="1" id="traWeight" class="slider"><br></td></tr>
             </table>
             <h3>Themes</h3>
             <select name="theme" id="theme" onchange="updateTheme()">
                 <option value="themes/dark">Dark (default)</option>
+                <option value="themes/autumn">Autumn</option>
                 <option value="themes/crimson">Crimson</option>
-                <option value="themes/purple">Purple</option>
                 <option value="themes/light">Light</option>
+                <option value="themes/purple">Purple</option>
             </select>
             <br>
             <input type="button" value="Help" id="helpButton">
@@ -114,7 +115,7 @@
             If you get a question wrong before it is finished, you are penalized 5 points and are given a neg. If you finish a question after the power (if there is one), you will be awarded 10 points (correct). If you correctly answer before the power, you will be awarded 15 points (power). Scores are formatted in the following way:<br>
             <span class="red">negs</span>/<span class="green">correct</span>/<span class="blue">powers</span>
             <h3>Information</h3>
-            Version 1.1.1 (10/24/2024)<br>
+            Version 1.1.0 (10/28/2024)<br>
             Made by Monocle
             <input type="button" value="Quit Menu" id="quitHelp">
         </div>

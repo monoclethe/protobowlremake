@@ -1,0 +1,118 @@
+body {
+    background-color: #C63D2F;
+}
+header {
+    background-color: #E25E3E;
+    color: white;
+}
+#playHist {
+    background-color: #E25E3E;
+}
+#statSett {
+    background-color: #E25E3E;
+}
+.play {
+    background-color: #42f545;
+}
+.pause {
+    background-color: #f5d742;
+}
+.play:hover {
+    background-color: #96f542;
+}
+.pause:hover {
+    background-color: #f57e42;
+}
+#skip {
+    background-color: #4242f5;
+}
+#skip:hover {
+    background-color: #429cf5;
+}
+#buzz {
+    background-color: #f54242;
+}
+#buzz:hover {
+    background-color: #f5429c;
+}
+.textBox {
+    background-color: #ff2720;
+    color: white;
+}
+#buzzAns {
+    background-color: #ff8635;
+    color: white;
+}
+#timerContainer {
+    background-color: #9c4e4e;
+}
+#timerBlock {
+    color: white;
+}
+.redstripe {
+    background: repeating-linear-gradient(
+    45deg,
+    #9c0000,
+    #9c0000 10px,
+    #830000 10px,
+    #830000 20px
+); 
+}
+.redbg {
+    background-color: #9c0000;
+}
+.bluestripe {
+    background: repeating-linear-gradient(
+    45deg,
+    #00009c,
+    #00009c 10px,
+    #000083 10px,
+    #000083 20px
+); 
+}
+.bluebg {
+    background-color: #00009c;
+}
+.greenstripe {
+    background: repeating-linear-gradient(
+    45deg,
+    #009c00,
+    #009c00 10px,
+    #008300 10px,
+    #008300 20px
+); 
+}
+.greenbg {
+    background-color: #009c00;
+}
+.solidLine {
+    border-bottom: 2px solid #800000;
+}
+.dottedLine {
+    border-bottom: 2px dashed #800000;
+}
+option, select {
+    background-color: #E25E3E;
+    color: white;
+}
+.popup {
+    background: #E25E3E;
+    border: 1px solid #C63D2F;
+}
+.red {
+    color: #F44;
+}
+.green {
+    color: #4F4;
+}
+.blue {
+    color: #44F;
+}
+#timerText {
+    color: white;
+}
+input {
+    background-color: #E25E3E;
+    color: white;
+    border: 2px solid #C63D2F;
+}

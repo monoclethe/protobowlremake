@@ -37,6 +37,8 @@ const qTextOut = document.getElementById("qText");
 
 const buzzAns = document.getElementById("buzzAns");
 
+var breakdownActive = false;
+
 var qActive = false;
 var plpaEnable = true;
 var plpaState = false;
@@ -186,7 +188,7 @@ function readTick () {
             if (qTextPos < qText.length) {
                 qRead = false;
                 qDisp += qText[qTextPos];
-                let timeoutLength = 110 - rSpeed.value;
+                let timeoutLength = 1000/((rSpeed.value*5)/60);
                 qTextOut.innerHTML = qDisp;
                 if (punctuation.includes(qText[qTextPos])) {
                     timeoutLength *= 5;
@@ -522,6 +524,24 @@ function updateTheme () {
 }
 
 function wpmUpdate () {
-    wpm.innerHTML = (60*(1000/(110 - rSpeed.value))/4.7).toFixed(1);
+    if (rSpeed.value < 1) {
+        rSpeed.value = 1;
+    }
 }
 wpmUpdate();
+
+function toggleBreakdown () {
+    if (breakdownActive) {
+        breakdownActive = false;
+        document.getElementById("categoryBreakdown").style.display = "none";
+    } else {
+        breakdownActive = true;
+        document.getElementById("categoryBreakdown").style.display = "block";
+    }
+}
+document.getElementById("scoreBreakdown").addEventListener("mouseenter", function () {
+    toggleBreakdown();
+})
+document.getElementById("scoreBreakdown").addEventListener("mouseleave", function () {
+    toggleBreakdown();
+})
